@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 9033057360533144296}
   - component: {fileID: 4316456701588591715}
   - component: {fileID: 8761436857513180568}
-  - component: {fileID: 300261291582335662}
+  - component: {fileID: 8857213132459241574}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -642,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 8761436857513180568}
   damage: 1
+  hasReachedTower: 0
 --- !u!114 &8761436857513180568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 4
---- !u!114 &300261291582335662
+--- !u!114 &8857213132459241574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -667,7 +668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a3eaf4f3e1d44459907e3a3b1affe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasReachedTower: 0
+  preferTower: 1
+  playerChaseRange: 10
 --- !u!1 &8341330725936832673
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,8 +43,9 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        
+
         // Evaluate State
+        Debug.Log(rb.linearVelocity);
         if (Time.time >= nextSwitchTime)
         {
             EvaluateState();
@@ -171,20 +172,24 @@ public class EnemyMovement : MonoBehaviour
         // keep the last MoveX value if not moving
         if (rb.linearVelocity == Vector2.zero) return;
 
+     
         // Update MoveX value
-        if (moveDirection.x <= 0)
+        if (rb.linearVelocity.x <= 0)
         {
+            
             animator.SetFloat("MoveX", 0);
         }
         else animator.SetFloat("MoveX", 1);
+        
     }
 
 
     // Idle Animation
     void Update_IdleAnimation_Direction()
     {
+        
 
-        if (moveDirection.x <= 0)
+        if (rb.linearVelocity.x <= 0)
         {
             animator.SetFloat("MoveX", 0);
         }
